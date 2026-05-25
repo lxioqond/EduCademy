@@ -1,5 +1,3 @@
-/* Registro page */
-
 main {
     margin-top: 10vh;
     min-height: 90vh;
@@ -128,4 +126,24 @@ main {
 
 .text-1 p {
     color: #ffffffaa;
+}
+
+@media (max-width: 768px) {
+    main {
+        background-position: center center;
+        padding: 0 16px;
+    }
+    .registro-container {
+        padding: 36px 24px;
+        margin: 20px 16px;
+    }
+    .registro-container h1 { font-size: 22px; margin-bottom: 20px; }
+}
+
+@media (max-width: 480px) {
+    .registro-container {
+        padding: 24px 16px;
+        border-radius: 12px;
+    }
+    .submit-button { font-size: 15px; padding: 12px; }
 }

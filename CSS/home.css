@@ -1,5 +1,3 @@
-/* Main */
-
 main {
     margin: 10vh 0 0 300px;
     padding: 48px 64px;
@@ -48,7 +46,6 @@ main {
 }
 .curso {
     width: 275px;
-    /* height: 350px; */
     background-color: #282B31;
     border: 1px solid #383838;
     border-radius: 12px;
@@ -95,4 +92,30 @@ main {
     font-weight: bold;
     font-size: 16px;
     margin-top: 16px;
+}
+
+@media (max-width: 1024px) {
+    .curso { width: 220px; }
+}
+
+@media (max-width: 768px) {
+    .bienvenida {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+    .bienvenida-container { justify-content: center; }
+    .bienvenida-button { width: 100%; text-align: center; padding: 12px; }
+    .mis-cursos h1 { padding: 24px 0 16px; }
+    .cursos {
+        justify-content: center;
+        gap: 16px;
+    }
+    .curso { width: 100%; max-width: 340px; }
+    .curso-estrella { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .curso { padding: 16px; }
+    .curso-nombre { font-size: 17px; }
 }

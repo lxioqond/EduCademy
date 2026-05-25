@@ -18,3 +18,12 @@
         padding: 28px 0;
     }
 }
+
+@media (max-width: 768px) {
+    .page-main {
+        padding: 20px 0 80px;
+    }
+    .page-card {
+        border-radius: 12px;
+    }
+}

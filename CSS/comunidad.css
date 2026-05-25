@@ -1,11 +1,8 @@
-/* Comunidad */
-
 main {
     margin: 10vh 0 0 300px;
     padding: 48px 64px;
 }
 
-/* Sección escribir */
 .escribir {
     background-color: #282B31;
     border: 1px solid #383838;
@@ -60,7 +57,6 @@ main {
     background-color: #1683b3;
 }
 
-/* Sección comentarios */
 .comentarios-container {
     display: flex;
     flex-direction: column;
@@ -99,4 +95,20 @@ main {
     color: #ffffffcc;
     font-size: 14px;
     line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+    main { padding: 32px 32px !important; }
+}
+
+@media (max-width: 768px) {
+    .escribir textarea { height: 80px; }
+    .button-form-div { justify-content: stretch; }
+    #enviar { width: 100%; }
+    .comentarios-container h3 { font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+    .comentario { padding: 12px 14px; }
+    .message-comentario { font-size: 13px; }
 }

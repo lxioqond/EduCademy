@@ -1,6 +1,3 @@
-/* ==========================================
-   ESTILOS BASE E INTERFAZ (Coherente con EduCademy)
-   ========================================== */
 body {
     background: linear-gradient(135deg, #182030 0%, #182030 50%, #0c1c2a 100%);
     margin: 0;
@@ -9,14 +6,12 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-/* Evita que el aside tape el contenido empujándolo 300px a la derecha */
 .compra-main {
     margin: 12vh 0 0 300px;
     padding: 32px 48px;
     min-height: 85vh;
 }
 
-/* Elementos Globales de Texto */
 .section-title {
     font-size: 22px;
     font-weight: bold;
@@ -24,9 +19,6 @@ body {
     color: #ffffff;
 }
 
-/* ==========================================
-   BARRA DE PASOS (Steps Indicator)
-   ========================================== */
 .steps-bar {
     display: flex;
     align-items: center;
@@ -84,9 +76,6 @@ body {
     margin: 0 20px;
 }
 
-/* ==========================================
-   CONTENEDOR DE PANTALLAS (Checkout Grid)
-   ========================================== */
 .step-section {
     display: none;
 }
@@ -104,14 +93,12 @@ body {
     margin: 0 auto;
 }
 
-/* Columna Izquierda */
 .checkout-left {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-/* Tarjeta del curso en Resumen */
 .course-card-checkout {
     background-color: #282B31;
     border: 1px solid #383838;
@@ -186,7 +173,6 @@ body {
     margin-right: 6px;
 }
 
-/* Sección del Cupón */
 .coupon-box {
     background-color: #282B31;
     border: 1px solid #383838;
@@ -233,9 +219,6 @@ body {
 .coupon-msg.ok { color: #2ecc71; }
 .coupon-msg.err { color: #e74c3c; }
 
-/* ==========================================
-   COLUMNA DERECHA (Caja de Totales)
-   ========================================== */
 .order-summary-box {
     background-color: #282B31;
     border: 1px solid #383838;
@@ -310,7 +293,6 @@ body {
     margin-right: 4px;
 }
 
-/* Mini Curso (Paso 2) */
 .mini-course {
     display: flex;
     align-items: center;
@@ -332,9 +314,6 @@ body {
     font-size: 14px;
 }
 
-/* ==========================================
-   METODOS DE PAGO Y FORMULARIOS
-   ========================================== */
 .payment-methods {
     display: flex;
     flex-direction: column;
@@ -389,7 +368,6 @@ body {
     color: white;
 }
 
-/* Formulario Tarjeta */
 .card-form {
     background-color: #282B31;
     border: 1px solid #383838;
@@ -476,9 +454,6 @@ body {
     color: white;
 }
 
-/* ==========================================
-   PANTALLA DE CONFIRMACIÓN (Paso 3)
-   ========================================== */
 .confirm-container {
     max-width: 550px;
     margin: 40px auto;
@@ -546,4 +521,63 @@ body {
     font-size: 14px;
     font-weight: 600;
     margin-top: 8px;
+}
+
+@media (max-width: 1024px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+    .order-summary-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .steps-bar {
+        gap: 4px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 24px;
+    }
+    .step-label { font-size: 12px; }
+    .step-line { display: none; }
+
+    .checkout-grid { grid-template-columns: 1fr; gap: 20px; }
+
+    .course-card-checkout {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .course-img-wrap {
+        width: 100%;
+        height: 180px;
+    }
+
+    .course-includes {
+        grid-template-columns: 1fr;
+    }
+
+    .coupon-row { flex-direction: column; }
+    .btn-coupon { padding: 12px; width: 100%; }
+
+    .form-row { flex-direction: column; }
+
+    .confirm-container {
+        padding: 28px 20px;
+        margin: 20px 0;
+    }
+    .confirm-course-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .confirm-course-box img { width: 100%; height: auto; }
+
+    .confirm-actions { gap: 10px; }
+}
+
+@media (max-width: 480px) {
+    .step-num { width: 26px; height: 26px; font-size: 12px; }
+    .step-label { font-size: 11px; }
+    .section-title { font-size: 18px; }
+    .total-row strong { font-size: 20px; }
 }

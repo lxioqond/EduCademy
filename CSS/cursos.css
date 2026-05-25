@@ -6,8 +6,6 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-/* Main */
-
 main {
     margin: 10vh 0 0 300px;
     padding: 48px 64px;
@@ -60,7 +58,6 @@ main {
 }
 .curso {
     width: 275px;
-    /* height: 350px; */
     background-color: #282B31;
     border: 1px solid #383838;
     border-radius: 12px;
@@ -112,7 +109,6 @@ main {
     margin-top: 16px;
 }
 
-/* Notificaciones */
 .notificaciones {
     background-color: #1a1c21;
     max-width: 550px;
@@ -175,7 +171,6 @@ main {
     margin: 0;
 }
 
-/* Precio del curso */
 .precio-curso {
     position: absolute;
     z-index: 10;
@@ -217,4 +212,59 @@ main {
 
 a {
     text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    .precio-curso {
+        position: static;
+        margin-top: 24px;
+        width: 100%;
+    }
+    .curso-layout {
+        flex-direction: column !important;
+    }
+    .curso-side {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .bienvenida {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+    .bienvenida-container { justify-content: center; }
+    .bienvenida-button { width: 100%; text-align: center; padding: 12px; }
+
+    .curso-layout {
+        flex-direction: column !important;
+    }
+    .curso-side {
+        width: 100% !important;
+    }
+    .precio-curso {
+        position: static;
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    .nav-notificaciones {
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 10px 8px;
+    }
+    .nav-notificaciones .nav-item {
+        font-size: 13px;
+        padding: 4px 10px;
+    }
+
+    .cursos { justify-content: center; }
+    .curso { width: 100%; max-width: 340px; }
+    .curso-estrella { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .nav-notificaciones .nav-item { font-size: 12px; padding: 4px 6px; }
+    .precio-valor { font-size: 20px; }
 }
