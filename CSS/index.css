@@ -1,0 +1,198 @@
+/* Header */
+
+header {
+    background-image: url(../Img/index_header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+    padding: 5%;
+    margin-top: 10vh;
+}
+
+header h1 {
+    font-size: 48px;
+    max-width: 500px;
+    margin-bottom: 48px;
+}
+header h1 b {
+    color: #1CA9D0;
+}
+
+header p {
+    font-size: 16px;
+    color: #ffffffcc;
+    max-width: 500px;
+    margin-bottom: 48px;
+}
+
+.header-buttons {
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.header-buttons button {
+    padding: 8px 16px;
+    width: 230px;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0;
+    height: 100%;
+}
+.header-buttons a {
+    text-decoration: none;
+}
+.header-buttons i {
+    margin-right: 8px;
+}
+.header-button1 {
+    background-color: #1F7E98;
+    border: none;
+}
+.header-button2 {
+    background-color: #1a1d2377;
+    border: 2px solid #1F7E98;
+}
+
+/* Main */
+
+.recomendaciones {
+    padding: 5%;
+}
+.recomendaciones h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+.recomendaciones-text {
+    color: #ffffffcc;
+}
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 32px;
+}
+
+.categoria {
+    text-align: center;
+    padding: 16px;
+    width: 200px;
+    background-color: #282B31;
+    border: 1px solid #1F7E98;
+    border-radius: 100px;
+    box-shadow: 0 0 8px #000000;
+    cursor: pointer;
+}
+.select {
+    background-color: #1F7E98;
+}
+.categoria-nombre {
+    font-weight: 600;
+}
+
+.cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+.curso {
+    width: 275px;
+    /* height: 350px; */
+    background-color: #282B31;
+    border: 1px solid #383838;
+    border-radius: 12px;
+    padding: 24px;
+}
+.curso img {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+.curso-nombre {
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.curso-autor {
+    font-size: 16px;
+    margin-bottom: 16px;
+    color: #ffffffcc;
+}
+.curso-precio {
+    font-weight: bold;
+    font-size: 20px;
+}
+.curso div {
+    display: flex;
+    justify-content: center;
+}
+.curso div button {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #1F7E98;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+.calidad {
+    background-image: url(../Img/fondo_2.jpg);
+    padding: 5%;
+    background-size: cover;
+    height: 100vh;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+.calidad h3 {
+    font-size: 36px;
+    margin-bottom: 48px;
+    width: 50%;
+}
+.calidad p {
+    font-size: 20px;
+    color: #ffffffcc;
+    max-width: 40%;
+}
+
+.herramientas {
+    padding: 5%;
+}
+.herramientas h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+.herramientas p {
+    color: #ffffffcc;
+}
+.paneles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+.panel {
+    width: 375px;
+    height: 400px;
+    background-color: #282B31;
+    border-radius: 12px;
+    border: 1px solid #383838;
+    border-top: 16px solid #1F7E98;
+    padding: 24px;
+    text-align: center;
+}
+.panel h3 {
+    font-size: 24px;
+}
+.panel img {
+    margin: 32px 0;
+}

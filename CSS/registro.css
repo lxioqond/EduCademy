@@ -1,0 +1,131 @@
+/* Registro page */
+
+main {
+    margin-top: 10vh;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../Img/registro_img.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.registro-container {
+    background-color: #15181Dcc;
+    backdrop-filter: blur(10px);
+    border: 1px solid #2a2d33;
+    border-radius: 16px;
+    padding: 48px 40px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    margin: 40px 20px;
+}
+
+.registro-container h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.input-container {
+    margin-bottom: 18px;
+}
+
+.input-container label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #ffffffcc;
+}
+
+.input-div {
+    display: flex;
+    align-items: center;
+    background-color: #292C30;
+    border: 1px solid #414141;
+    border-radius: 8px;
+    padding: 0 12px;
+    transition: border-color 0.2s;
+}
+
+.input-div:focus-within {
+    border-color: #1B9ECB;
+}
+
+.input-div input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input-div input::placeholder {
+    color: #ffffff55;
+}
+
+.ojo, .ojo2 {
+    cursor: pointer;
+    color: #ffffffaa;
+    font-size: 16px;
+    padding: 0 4px;
+}
+
+.submit-container {
+    margin-top: 24px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #1A8FC4;
+    border: none;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.submit-button:hover {
+    background-color: #1683b3;
+}
+
+.text-0 {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.text-0 p {
+    color: #ffffffaa;
+}
+
+.text-0 a, .text-1 a {
+    color: #1A8FC4;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.text-1 {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.text-1 p {
+    color: #ffffffaa;
+}

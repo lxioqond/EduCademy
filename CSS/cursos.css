@@ -1,0 +1,220 @@
+body {
+    background: linear-gradient(135deg, #182030 0%, #182030 50%, #0c1c2a 100%);
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main */
+
+main {
+    margin: 10vh 0 0 300px;
+    padding: 48px 64px;
+}
+
+.bienvenida {
+    background-color: #282B31;
+    border-radius: 8px;
+    box-shadow: 0 0 12px #0000007a;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+.bienvenida-container {
+    display: flex;
+}
+.bienvenida-container i {
+    font-size: 20px;
+    margin-right: 16px;
+}
+.bienvenido-user {
+    color: #1A8FC4;
+}
+.bienvenida-button {
+    font-weight: 600;
+    padding: 8px 12px;
+    background-color: #1A8FC4;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.bienvenida-button i {
+    margin-left: 16px;
+}
+
+.mis-cursos h1 {
+    padding: 0px 0 24px;
+}
+
+.mis-cursos p {
+    padding: 0px 0 24px;
+}
+
+.cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+.curso {
+    width: 275px;
+    /* height: 350px; */
+    background-color: #282B31;
+    border: 1px solid #383838;
+    border-radius: 12px;
+    padding: 24px;
+}
+.curso img {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+.curso-nombre {
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.curso-autor {
+    font-size: 16px;
+    color: #ffffffcc;
+    padding: 10px 0 24px;
+}
+
+.fecha{
+    font-size: 12px;
+    
+}
+.curso-estrella {
+    font-size: 16px;
+    text-align: left;
+    width: 250px;
+    padding: 0px 0 24px;
+}
+.curso-estrella p {
+    font-weight: 700;
+    margin-left: 16px;
+    display: inline;
+}
+.curso-button-container {
+    display: flex;
+    justify-content: center;
+}
+.curso-button-container button {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #1F7E98;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+/* Notificaciones */
+.notificaciones {
+    background-color: #1a1c21;
+    max-width: 550px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-notificaciones {
+    display: flex;
+    background-color: #212429;
+    padding: 12px 0;
+}
+
+.nav-notificaciones .nav-item {
+    padding: 0 18px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.nav-notificaciones .nav-item.active {
+    opacity: 1;
+}
+
+.notificacion-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    border-bottom: 1px solid #282B31;
+    transition: background-color 0.2s;
+}
+
+.notificacion-item:hover {
+    background-color: #23262c;
+}
+
+.icono-notificacion {
+    background-color: #282B31;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}
+
+.icono-notificacion i {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.notificacion-item p {
+    color: #ffffff;
+    font-size: 14px;
+    padding: 0 !important;
+    margin: 0;
+}
+
+/* Precio del curso */
+.precio-curso {
+    position: absolute;
+    z-index: 10;
+    right: 30px;
+    top: 100px;
+    background-color: rgba(26, 28, 33, 0.9);
+    border: 1px solid #2a2d33;
+    border-radius: 8px;
+    padding: 20px;
+    width: fit-content;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.precio-valor {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.btn-comprar {
+    background-color: #1A8FC4;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #1683b3;
+}
+
+a {
+    text-decoration: none;
+}

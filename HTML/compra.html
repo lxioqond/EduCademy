@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Curso - EduCademy</title>
+    <meta name="requires-auth" content="true">
+    <link rel="stylesheet" href="../CSS/style2.css">
+    <link rel="stylesheet" href="../CSS/compra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../Img/logo.png">
+</head>
+<body>
+    <nav>
+        <section class="nav-section">
+            <img src="../Img/logo.png" class="logo">
+            <input type="text" placeholder="Busca tu curso favorito" class="input-buscar">
+            <div class="dropdown-container">
+                <div class="dropdown-button">
+                    <p>Usuario</p>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="dropdown-opciones">
+                    <a id="cerrarSesion" href="login.html">Cerrar sesión</a>
+                </div>
+            </div>
+        </section>
+    </nav>
+
+    <aside>
+        <div class="aside-container">
+            <div class="list-aside">
+                <a href="home.html">Inicio</a>
+                <a href="cursosGen.html">Cursos</a>
+                <a href="comunidad.html">Comunidad</a>
+                <a href="otros.html">Otros</a>
+            </div>
+            <div class="chats-container">
+                <div class="chats">
+                    <i class="fa-solid fa-comments"></i><p>Chats</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="compra-main">
+
+        <div class="steps-bar">
+            <div class="step active" id="step-ind-1">
+                <span class="step-num">1</span>
+                <span class="step-label">Resumen</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" id="step-ind-2">
+                <span class="step-num">2</span>
+                <span class="step-label">Pago</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" id="step-ind-3">
+                <span class="step-num">3</span>
+                <span class="step-label">Confirmación</span>
+            </div>
+        </div>
+
+        <section class="step-section active" id="step-1">
+            <div class="checkout-grid">
+                <div class="checkout-left">
+                    <h2 class="section-title">Resumen del pedido</h2>
+                    <div class="course-card-checkout">
+                        <div class="course-img-wrap">
+                            <img src="../Img/curso_java.jfif" alt="Curso" id="courseImg">
+                        </div>
+                        <div class="course-info-checkout">
+                            <span class="badge-categoria">Programación</span>
+                            <h3 id="courseTitle">Curso de Java</h3>
+                            <p class="course-author"><i class="fa-solid fa-circle-user"></i> Norberto Colorado</p>
+                            <div class="course-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <ul class="course-includes">
+                                <li><i class="fa-solid fa-infinity"></i> Acceso de por vida</li>
+                                <li><i class="fa-solid fa-mobile-screen"></i> Acceso en móvil y PC</li>
+                                <li><i class="fa-solid fa-certificate"></i> Certificado al completar</li>
+                                <li><i class="fa-solid fa-file-video"></i> 48 horas de video</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="coupon-box">
+                        <label for="couponInput"><i class="fa-solid fa-tag"></i> ¿Tienes un cupón?</label>
+                        <div class="coupon-row">
+                            <input type="text" id="couponInput" placeholder="Ingresa tu código">
+                            <button id="applyCoupon" class="btn-coupon">Aplicar</button>
+                        </div>
+                        <p id="couponMsg" class="coupon-msg"></p>
+                    </div>
+                </div>
+
+                <div class="checkout-right">
+                    <div class="order-summary-box">
+                        <h2 class="section-title">Total</h2>
+                        <div class="price-breakdown">
+                            <div class="price-row">
+                                <span>Precio original</span>
+                                <span id="originalPrice">$9.99</span>
+                            </div>
+                            <div class="price-row discount-row" id="discountRow" style="display:none;">
+                                <span>Descuento cupón</span>
+                                <span id="discountAmt" class="green">-$0.00</span>
+                            </div>
+                            <div class="price-divider"></div>
+                            <div class="price-row total-row">
+                                <span>Total</span>
+                                <strong id="totalPrice">$9.99</strong>
+                            </div>
+                        </div>
+                        <button class="btn-continuar" id="goToPayment">
+                            Continuar al pago <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <p class="guarantee">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            Garantía de devolución de 30 días
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="step-section" id="step-2">
+            <div class="checkout-grid">
+                <div class="checkout-left">
+                    <h2 class="section-title">Método de pago</h2>
+
+                    <div class="payment-methods">
+                        <label class="method-option selected" data-method="card">
+                            <input type="radio" name="method" value="card" checked hidden>
+                            <i class="fa-regular fa-credit-card"></i>
+                            <span>Tarjeta de crédito / débito</span>
+                            <div class="method-check"><i class="fa-solid fa-check"></i></div>
+                        </label>
+                        <label class="method-option" data-method="paypal">
+                            <input type="radio" name="method" value="paypal" hidden>
+                            <i class="fa-brands fa-paypal"></i>
+                            <span>PayPal</span>
+                            <div class="method-check"><i class="fa-solid fa-check"></i></div>
+                        </label>
+                        <label class="method-option" data-method="transfer">
+                            <input type="radio" name="method" value="transfer" hidden>
+                            <i class="fa-solid fa-building-columns"></i>
+                            <span>Transferencia bancaria</span>
+                            <div class="method-check"><i class="fa-solid fa-check"></i></div>
+                        </label>
+                    </div>
+
+                    <div class="card-form" id="cardForm">
+                        <div class="form-group">
+                            <label for="cardName">Nombre en la tarjeta</label>
+                            <input type="text" id="cardName" placeholder="Ej: Juan Pérez" maxlength="40">
+                        </div>
+                        <div class="form-group">
+                            <label for="cardNumber">Número de tarjeta</label>
+                            <div class="card-input-wrap">
+                                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                <i class="fa-regular fa-credit-card card-icon-field"></i>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cardExpiry">Vencimiento</label>
+                                <input type="text" id="cardExpiry" placeholder="MM/AA" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="cardCvv">CVV</label>
+                                <input type="text" id="cardCvv" placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alt-method-msg" id="paypalMsg" style="display:none;">
+                        <i class="fa-brands fa-paypal"></i>
+                        <p>Serás redirigido a PayPal para completar tu pago de forma segura.</p>
+                    </div>
+
+                    <div class="alt-method-msg" id="transferMsg" style="display:none;">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <p>Banco: <strong>Banco EduCademy</strong><br>Cuenta: <strong>0123-4567-8901</strong><br>Envía tu comprobante a pagos@educademy.com</p>
+                    </div>
+
+                    <button class="btn-back" id="backToSummary">
+                        <i class="fa-solid fa-arrow-left"></i> Volver al resumen
+                    </button>
+                </div>
+
+                <div class="checkout-right">
+                    <div class="order-summary-box">
+                        <h2 class="section-title">Tu pedido</h2>
+                        <div class="mini-course">
+                            <img src="../Img/curso_java.jfif" alt="Curso" id="miniCourseImg">
+                            <span id="miniCourseTitle">Curso de Java</span>
+                        </div>
+                        <div class="price-divider"></div>
+                        <div class="price-row total-row">
+                            <span>Total</span>
+                            <strong id="totalPrice2">$9.99</strong>
+                        </div>
+                        <button class="btn-continuar" id="goToConfirm">
+                            Pagar ahora <i class="fa-solid fa-lock"></i>
+                        </button>
+                        <p class="guarantee">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            Pago 100% seguro y simulado
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="step-section" id="step-3">
+            <div class="confirm-container">
+                <div class="confirm-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h2>¡Compra exitosa!</h2>
+                <p class="confirm-sub">Ya tienes acceso a tu curso. ¡Empieza a aprender ahora!</p>
+                <div class="confirm-course-box">
+                    <img src="../Img/curso_java.jfif" alt="Curso" id="confirmCourseImg">
+                    <div>
+                        <h4 id="confirmCourseTitle">Curso de Java</h4>
+                        <p class="confirm-author">Norberto Colorado</p>
+                    </div>
+                </div>
+                <div class="confirm-actions">
+                    <a href="cursos.html" class="btn-continuar" id="goToCourse">
+                        Ir al curso <i class="fa-solid fa-play"></i>
+                    </a>
+                    <a href="home.html" class="btn-back-link">Volver al inicio</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../JS/app.js"></script>
+    <script>
+    (function() {
+        const COUPON_CODES = { 'EDU20': 20, 'JAVA10': 10, 'BIENVENIDO': 15 };
+        // Ajustamos la constante base al precio real del curso que tenías en la anterior pantalla
+        const BASE_PRICE = 9.99; 
+        let discount = 0;
+
+        const params = new URLSearchParams(window.location.search);
+        const courseTitle = params.get('titulo') || 'Curso de Java';
+        const courseImg = params.get('img') || '../Img/curso_java.jfif';
+        const courseLink = params.get('link') || 'cursos.html';
+
+        ['courseTitle','miniCourseTitle','confirmCourseTitle'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.textContent = courseTitle;
+        });
+        ['courseImg','miniCourseImg','confirmCourseImg'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.src = courseImg;
+        });
+        const goToCourse = document.getElementById('goToCourse');
+        if (goToCourse) goToCourse.href = courseLink;
+
+        function goToStep(n) {
+            document.querySelectorAll('.step-section').forEach((s,i) => {
+                s.classList.toggle('active', i+1 === n);
+            });
+            document.querySelectorAll('.step').forEach((s,i) => {
+                s.classList.toggle('active', i+1 <= n);
+                s.classList.toggle('done', i+1 < n);
+            });
+        }
+
+        document.getElementById('goToPayment')?.addEventListener('click', () => goToStep(2));
+        document.getElementById('backToSummary')?.addEventListener('click', () => goToStep(1));
+        document.getElementById('goToConfirm')?.addEventListener('click', () => {
+            const purchases = JSON.parse(localStorage.getItem('educademy_purchases') || '[]');
+            if (!purchases.includes(courseTitle)) purchases.push(courseTitle);
+            localStorage.setItem('educademy_purchases', JSON.stringify(purchases));
+            goToStep(3);
+        });
+
+        document.getElementById('applyCoupon')?.addEventListener('click', () => {
+            const code = (document.getElementById('couponInput')?.value || '').trim().toUpperCase();
+            const msg = document.getElementById('couponMsg');
+            if (COUPON_CODES[code] !== undefined) {
+                discount = COUPON_CODES[code];
+                const saved = (BASE_PRICE * discount / 100).toFixed(2);
+                const total = (BASE_PRICE - BASE_PRICE * discount / 100).toFixed(2);
+                document.getElementById('discountRow').style.display = '';
+                document.getElementById('discountAmt').textContent = `-$${saved}`;
+                document.getElementById('totalPrice').textContent = `$${total}`;
+                document.getElementById('totalPrice2').textContent = `$${total}`;
+                msg.textContent = `✓ Cupón aplicado: ${discount}% de descuento`;
+                msg.className = 'coupon-msg ok';
+            } else {
+                msg.textContent = 'Cupón inválido. Prueba: EDU20, JAVA10 o BIENVENIDO';
+                msg.className = 'coupon-msg err';
+            }
+        });
+
+        document.querySelectorAll('.method-option').forEach(opt => {
+            opt.addEventListener('click', () => {
+                document.querySelectorAll('.method-option').forEach(o => o.classList.remove('selected'));
+                opt.classList.add('selected');
+                opt.querySelector('input').checked = true;
+                const method = opt.dataset.method;
+                document.getElementById('cardForm').style.display = method === 'card' ? '' : 'none';
+                document.getElementById('paypalMsg').style.display = method === 'paypal' ? '' : 'none';
+                document.getElementById('transferMsg').style.display = method === 'transfer' ? '' : 'none';
+            });
+        });
+
+        document.getElementById('cardNumber')?.addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g,'').replace(/(.{4})/g,'$1 ').trim().slice(0,19);
+        });
+        document.getElementById('cardExpiry')?.addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g,'').replace(/(\d{2})(\d)/,'$1/$2').slice(0,5);
+        });
+        document.getElementById('cardCvv')?.addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g,'').slice(0,3);
+        });
+
+        const dropBtn = document.querySelector('.dropdown-button');
+        const dropOpts = document.querySelector('.dropdown-opciones');
+        if (dropBtn && dropOpts) {
+            dropBtn.addEventListener('click', () => dropOpts.classList.toggle('open'));
+        }
+    })();
+    </script>
+</body>
+</html>

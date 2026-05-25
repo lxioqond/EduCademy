@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="requires-auth" content="true">
+    <title>Registro - EduCademy</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/registro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../Img/logo.png">
+</head>
+<body>
+    <nav>
+        <section class="nav-section">
+            <img src="../Img/logo.png" class="logo">
+            <ul class="main-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursosGen.html">Cursos</a></li>
+                <li><a href="comunidad.html">Comunidad</a></li>
+                <li><a href="otros.html">Otros</a></li>
+            </ul>
+            <div class="search-login">
+                <a href="login.html"><button class="btn-acceder">Iniciar sesión</button></a>
+            </div>
+        </section>
+    </nav>
+    <main>
+        <section class="registro-container">
+            <h1>Registrarse</h1>
+            <form id="registerForm" action="#" method="post">
+                <div class="input-container">
+                    <label for="correo">Correo electrónico:</label>
+                    <div class="input-div">
+                        <input type="email" placeholder="Correo electrónico" name="correo" id="correo" autocomplete="email" required>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="usu">Usuario:</label>
+                    <div class="input-div">
+                        <input type="text" placeholder="Usuario" name="usu" id="usu" autocomplete="username" required>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="contra">Contraseña:</label>
+                    <div class="input-div">
+                        <input type="password" placeholder="Contraseña" name="contra" id="contra" autocomplete="new-password" required>
+                        <i class="fa-regular fa-eye ojo" title="Mostrar/ocultar contraseña" role="button" tabindex="0"></i>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="con_contra">Confirmar contraseña:</label>
+                    <div class="input-div">
+                        <input type="password" placeholder="Confirmar contraseña" name="con_contra" id="con_contra" autocomplete="new-password" required>
+                        <i class="fa-regular fa-eye ojo2" title="Mostrar/ocultar contraseña" role="button" tabindex="0"></i>
+                    </div>
+                </div>
+                <div class="submit-container">
+                    <input type="submit" value="Registrarse" class="submit-button">
+                </div>
+            </form>
+            <div class="text-1"><p>¿Tienes problemas para registrarte? </p><a href="ayuda.html">Ayuda</a></div>
+            <div class="text-0"><p>¿Ya tienes una cuenta?</p><a href="login.html">Inicia sesión</a></div>
+        </section>
+    </main>
+    <script src="../JS/app.js"></script>
+</body>
+</html>

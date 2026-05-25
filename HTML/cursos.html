@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Java - EduCademy</title>
+    <link rel="stylesheet" href="../CSS/style2.css">
+    <link rel="stylesheet" href="../CSS/cursos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../Img/logo.png">
+</head>
+<body> 
+    <nav>
+        <section class="nav-section">
+            <img src="../Img/logo.png" class="logo">
+            <input type="text" placeholder="Busca tu curso favorito" class="input-buscar">
+            <div class="dropdown-container">
+                <div class="dropdown-button">
+                    <p>Usuario</p>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="dropdown-opciones">
+                    <a id="cerrarSesion" href="login.html">Cerrar sesión</a>
+                </div>
+            </div>
+        </section>
+    </nav>
+    <aside>
+        <div class="aside-container">
+            <div class="list-aside">
+                <a href="home.html">Inicio</a>
+                <a href="cursosGen.html">Cursos</a>
+                <a href="comunidad.html">Comunidad</a>
+                <a href="otros.html">Otros</a>
+            </div>
+            <div class="chats-container">
+                <div class="chats">
+                    <i class="fa-solid fa-comments"></i><p>Chats</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <article class="mis-cursos">
+            <div class="curso-layout">
+                <div class="curso-main">
+                    <h1 id="mainCourseTitle">Curso de Java</h1>
+                    <p>Norberto Colorado</p>
+                    <div class="curso-estrella">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p>5</p>
+                    </div>
+                    <div>
+                        <p class="curso-autor">Aprende Java desde lo más básico hasta un nivel avanzado con este curso completo. Java es uno de los lenguajes de programación más utilizados en el mundo, ideal para desarrollo de aplicaciones web, móviles, empresariales y más.</p>
+                        <p class="fecha">Publicado el 4 de abril de 2025</p>
+                    </div>
+
+                    <div class="nav-notificaciones" data-tabs="curso" id="curso-tabs-nav">
+                        <a href="#inicio" class="nav-item active" data-tab="inicio">Inicio</a>
+                        <a href="#temario" class="nav-item" data-tab="temario">Temario</a>
+                        <a href="#material" class="nav-item" data-tab="material">Material</a>
+                        <a href="#resenas" class="nav-item" data-tab="resenas">Reseñas</a>
+                        <a href="#comentarios" class="nav-item" data-tab="comentarios">Comentarios</a>
+                    </div>
+
+                    <div class="curso-tab" data-tab-panel="inicio">
+                        <a href="#temario" class="notificacion-item enlace-clase" id="link-nueva-clase" style="text-decoration: none; color: inherit; display: flex; width: 100%;">
+                            <div class="icono-notificacion">
+                                <i class="fa-solid fa-file-lines"></i>
+                            </div>
+                            <p style="margin: 0;">Nueva clase publicada <span style="color: #3498db; font-size: 0.9em; margin-left: 10px;">(Ver material descargable)</span></p>
+                        </a>
+
+                        <div class="notificacion-item"><div class="icono-notificacion"><i class="fa-solid fa-bell"></i></div><p>Nuevo comentario publicado</p></div>
+                        <div class="notificacion-item"><div class="icono-notificacion"><i class="fa-solid fa-file-lines"></i></div><p>Nuevo material publicado</p></div>
+                        <div class="notificacion-item"><div class="icono-notificacion"><i class="fa-solid fa-circle-check"></i></div><p>Nueva evaluación publicada</p></div>
+                    </div>
+
+                    <div class="curso-tab" data-tab-panel="temario" hidden>
+                        <div class="notificacion-item"><div class="icono-notificacion"><i class="fa-solid fa-layer-group"></i></div><p>Fundamentos de Java</p></div>
+                        <div class="notificacion-item"><div class="icono-notificacion"><i class="fa-solid fa-code"></i></div><p>POO: clases, objetos e interfaces</p></div>
+                        <div class="notificacion-item"><div class="icono-notificacion"><i class="fa-solid fa-database"></i></div><p>Conexión a bases de datos</p></div>
+                        
+                        <div style="margin-top: 25px; padding: 20px; background: #fdfefe; border: 1px solid #e2e8f0; border-left: 5px solid #2ecc71; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" id="seccion-clase-nueva">
+                            <h3 style="margin-top: 0; color: #2c3e50; font-size: 18px;">
+                                <i class="fa-solid fa-download" style="color: #2ecc71; margin-right: 8px;"></i> 
+                                Recursos de la Última Clase: Arquitectura y Buenas Prácticas
+                            </h3>
+                            <p style="font-size: 14px; color: #64748b; line-height: 1.5; margin-bottom: 15px;">
+                                Se ha publicado la documentación oficial complementaria y las plantillas de código limpio para este módulo. Haz clic en cualquiera de los siguientes elementos para descargar los recursos directamente a tu equipo o acceder al repositorio externo:
+                            </p>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <a href="../Descargas/cheat-sheet-java.pdf" download="Java_CheatSheet_EduCademy.pdf" style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; text-decoration: none; color: #334155; transition: background 0.2s;">
+                                    <div style="display: flex; align-items: center; gap: 10px; font-size: 14px;">
+                                        <i class="fa-solid fa-file-pdf" style="color: #e74c3c; font-size: 18px;"></i>
+                                        <div>
+                                            <strong style="display: block;">Hoja de Trucos: Sintaxis y Colecciones</strong>
+                                            <span style="font-size: 12px; color: #94a3b8;">Documento PDF - 1.2 MB</span>
+                                        </div>
+                                    </div>
+                                    <span style="background: #2ecc71; color: white; padding: 6px 12px; border-radius: 4px; font-size: 12px; font-weight: bold;">Descargar</span>
+                                </a>
+
+                                <a href="https://github.com/tu-usuario/proyecto-java-ejemplo" target="_blank" style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; text-decoration: none; color: #334155;">
+                                    <div style="display: flex; align-items: center; gap: 10px; font-size: 14px;">
+                                        <i class="fa-brands fa-github" style="color: #1e293b; font-size: 18px;"></i>
+                                        <div>
+                                            <strong style="display: block;">Proyecto Base de la Clase (Código Fuente)</strong>
+                                            <span style="font-size: 12px; color: #94a3b8;">Acceso externo a GitHub</span>
+                                        </div>
+                                    </div>
+                                    <span style="background: #1e293b; color: white; padding: 6px 12px; border-radius: 4px; font-size: 12px; font-weight: bold;">Ver Repositorio <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 10px; margin-left: 4px;"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="curso-tab" data-tab-panel="material" hidden>
+                        <div class="notificacion-item"><div class="icono-notificacion"><i class="fa-solid fa-file-arrow-down"></i></div><p>Guía rápida (PDF)</p></div>
+                        <div class="notificacion-item"><div class="icono-notificacion"><i class="fa-solid fa-folder-open"></i></div><p>Ejercicios (ZIP)</p></div>
+                    </div>
+
+                    <div class="curso-tab" data-tab-panel="resenas" hidden>
+                        <div class="notificacion-item"><div class="icono-notificacion"><i class="fa-solid fa-star"></i></div><p>Muy buen curso, explicaciones claras.</p></div>
+                        <div class="notificacion-item"><div class="icono-notificacion"><i class="fa-solid fa-star"></i></div><p>Me ayudó a entender POO desde cero.</p></div>
+                    </div>
+
+                    <div class="curso-tab" data-tab-panel="comentarios" hidden>
+                        <div class="notificacion-item"><div class="icono-notificacion"><i class="fa-solid fa-comment-dots"></i></div><p>¿Qué IDE recomiendan para comenzar?</p></div>
+                    </div>
+                </div>
+
+                <div class="curso-side">
+                    <div class="precio-curso" id="purchase-side-box">
+                        <div class="precio-valor">$9.99</div>
+                        <a href="../HTML/compra.html" id="btn-comprar-curso">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    
+    <footer>
+        <div id="footer-img">
+            <img src="../Img/logo.png" alt="EduCademy" id="icon-footer">
+        </div>
+        <div class="footer-container">    
+            <div id="links-footer">
+                <div class="container-links end-links">
+                    <h3 id="footer11">Otros</h3>
+                    <a href="contacto.html" id="footer12">Contacto</a>
+                    <a href="nosotros.html" id="footer13">Nosotros</a>
+                    <a href="login.html" id="footer15">Iniciar sesión</a>
+                    <a href="registro.html" id="footer14">Registro</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-social">
+            <h3 id="footer11">Social</h3>
+            <a href="https://www.facebook.com/healncy" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></a>
+            <a href="https://x.com/healncy" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
+            <a href="https://www.instagram.com/healncy/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+        </div>
+    </footer>
+
+    <script src="../JS/app.js"></script>
+    
+    <script>
+    (function() {
+        // 1. Lógica del botón de compra
+        const courseTitle = document.getElementById('mainCourseTitle')?.textContent || "Curso de Java";
+        const purchases = JSON.parse(localStorage.getItem('educademy_purchases') || '[]');
+
+        if (purchases.includes(courseTitle)) {
+            const purchaseBox = document.getElementById('purchase-side-box');
+            if (purchaseBox) {
+                purchaseBox.innerHTML = `
+                    <div style="color: #2ecc71; font-weight: bold; margin-bottom: 12px; font-size: 16px;">
+                        <i class="fa-solid fa-circle-check"></i> Ya tienes este curso
+                    </div>
+                    <a href="cursosGen.html" style="background-color: #2ecc71; text-align: center; display: block; color: white; text-decoration: none; padding: 10px; border-radius: 6px; font-weight: bold;">
+                        Ir a mis cursos
+                    </a>
+                `;
+            }
+        }
+
+        // 2. Lógica para redireccionar desde "Nueva clase publicada" hacia Temario
+        const linkNuevaClase = document.getElementById('link-nueva-clase');
+        if (linkNuevaClase) {
+            linkNuevaClase.addEventListener('click', function(e) {
+                e.preventDefault(); 
+
+                const tabButtons = document.querySelectorAll('.nav-notificaciones .nav-item');
+                const tabPanels = document.querySelectorAll('.curso-main .curso-tab');
+
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanels.forEach(panel => panel.setAttribute('hidden', 'true'));
+
+                const temarioBtn = document.querySelector('.nav-notificaciones .nav-item[data-tab="temario"]');
+                if (temarioBtn) temarioBtn.classList.add('active');
+
+                const temarioPanel = document.querySelector('.curso-main .curso-tab[data-tab-panel="temario"]');
+                if (temarioPanel) {
+                    temarioPanel.removeAttribute('hidden');
+                    
+                    document.getElementById('seccion-clase-nueva').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }
+            });
+        }
+    })();
+    </script>
+</body>
+</html>

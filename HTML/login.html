@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="requires-auth" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - EduCademy</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../Img/logo.png">
+</head>
+<body>
+    <nav>
+        <section class="nav-section">
+            <img src="../Img/logo.png" class="logo">
+            <ul class="main-menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="cursosGen.html">Cursos</a></li>
+                <li><a href="comunidad.html">Comunidad</a></li>
+                <li><a href="otros.html">Otros</a></li>
+            </ul>
+            <div class="search-login">
+                <a href="login.html"><button class="btn-acceder">Acceder</button></a>
+            </div>
+        </section>
+    </nav>
+    <main>
+        <section class="login-container">
+            <div class="login-card">
+                <h1>Iniciar Sesión</h1>
+                <p class="login-subtitle">Bienvenido de vuelta a EduCademy</p>
+                <form id="loginForm" action="#" method="post">
+                    <div class="input-container">
+                        <label for="usu">Usuario o correo:</label>
+                        <div class="input-div">
+                            <i class="fa-solid fa-user input-icon"></i>
+                            <input type="text" placeholder="Tu usuario o correo" name="usu" id="usu" autocomplete="username" required>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <label for="contra">Contraseña:</label>
+                        <div class="input-div">
+                            <i class="fa-solid fa-lock input-icon"></i>
+                            <input type="password" placeholder="Tu contraseña" name="contra" id="contra" autocomplete="current-password" required>
+                            <i class="fa-regular fa-eye ojo" title="Mostrar/ocultar contraseña" role="button" tabindex="0"></i>
+                        </div>
+                    </div>
+                    <div class="submit-container">
+                        <input type="submit" value="Iniciar sesión" class="submit-button">
+                    </div>
+                </form>
+                <div class="text-0"><p>¿No tienes cuenta?</p><a href="registro.html">Regístrate aquí</a></div>
+                <div class="text-1"><a href="recuperar.html">¿Olvidaste tu contraseña?</a></div>
+            </div>
+        </section>
+    </main>
+    <script src="../JS/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+.page-main {
+    margin-top: 10vh;
+    padding: 48px 0;
+}
+
+.page-card {
+    background-color: #282B31;
+    border: 1px solid #383838;
+    border-radius: 16px;
+}
+
+.page-muted {
+    color: #ffffffaa;
+}
+
+@media (max-width: 900px) {
+    .page-main {
+        padding: 28px 0;
+    }
+}

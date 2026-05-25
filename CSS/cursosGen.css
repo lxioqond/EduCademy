@@ -1,0 +1,145 @@
+/* Catálogo de cursos */
+
+main {
+    margin: 10vh 0 0 300px;
+    padding: 48px 64px;
+}
+
+.catalogo h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.catalogo-subtitulo {
+    color: #ffffffaa;
+    margin-bottom: 28px;
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+.filtro-btn {
+    padding: 8px 20px;
+    border-radius: 100px;
+    border: 1px solid #414141;
+    background-color: #282B31;
+    color: #ffffffcc;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.filtro-btn:hover {
+    border-color: #1A8FC4;
+    color: #FFFFFF;
+}
+
+.filtro-btn.activo {
+    background-color: #1A8FC4;
+    border-color: #1A8FC4;
+    color: #FFFFFF;
+}
+
+/* Grid de cursos */
+.cursos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.curso-card {
+    width: 270px;
+    background-color: #282B31;
+    border: 1px solid #383838;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.curso-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.curso-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.curso-info {
+    padding: 16px;
+}
+
+.curso-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: #1A8FC4;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.curso-nombre {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 8px 0 4px;
+}
+
+.curso-autor {
+    font-size: 13px;
+    color: #ffffffaa;
+    margin-bottom: 10px;
+}
+
+.curso-estrella {
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+
+.curso-estrella i {
+    color: #f5c518;
+}
+
+.curso-estrella p {
+    display: inline;
+    font-weight: 700;
+    margin-left: 6px;
+}
+
+.curso-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.curso-precio {
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.btn-ver {
+    background-color: #1A8FC4;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.2s;
+}
+
+.btn-ver:hover {
+    background-color: #1683b3;
+}
